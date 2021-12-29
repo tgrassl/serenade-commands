@@ -15,3 +15,16 @@ serenade.app("vscode").command("rename", async (api) => {
 serenade.app("vscode").command("clear", clearCommand)
 
 serenade.app("vscode").command("list", listCommand)
+
+serenade.app("vscode").command("explorer", async (api) => {
+  await api.pressKey("e", ["commandOrControl", "shift"])
+})
+
+serenade.app("vscode").command("search", async (api) => {
+  await api.pressKey("f", ["commandOrControl", "shift"])
+})
+
+serenade.app("vscode").command("git", async (api) => {
+  await api.pressKey("g", ["commandOrControl", "shift"])
+  await api.pressKey("g")
+})
